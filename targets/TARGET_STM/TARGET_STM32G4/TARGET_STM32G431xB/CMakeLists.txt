@@ -1,9 +1,8 @@
 # Copyright (c) 2020 ARM Limited. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
 
-if("NUCLEO_G431KB" IN_LIST MBED_TARGET_LABELS)
-    add_subdirectory(TARGET_NUCLEO_G431KB)
-endif()
+add_subdirectory(TARGET_NUCLEO_G431KB EXCLUDE_FROM_ALL)
+add_subdirectory(TARGET_NUCLEO_G431RB EXCLUDE_FROM_ALL)
 
 if(${MBED_TOOLCHAIN} STREQUAL "GCC_ARM")
     set(STARTUP_FILE TOOLCHAIN_GCC_ARM/startup_stm32g431xx.S)
